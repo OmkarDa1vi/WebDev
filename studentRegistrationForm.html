@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1><center>STUDENT REGESTRATION FORM</center></h1>
+
+    <table align="center" style="background-color: aqua;" width="50%">
+        <form>
+            <tr>
+                <td>First Name</td>
+                <td><input type="text" name="firstName" placeholder="First Name" required></td>
+            </tr>
+            <tr>
+                <td>Last Name</td>
+                <td><input type="text" name="lastName" placeholder="Last Name" required></td>
+            </tr>
+            <tr>
+                <td>Gender</td>
+                <td>
+                    <input type="radio" name="gender" value="Male" required>Male 
+                    <input type="radio" name="gender" value="Female" required>Female
+                    <input type="radio" name="gender" value="Other" required>Other
+                </td>   
+            </tr>
+            <tr>
+                <td>Date of Birth</td>
+                <td><input type="date" name="dob" required></td>
+            </tr>
+            <tr>
+                <td>Email</td>
+                <td><input type="email" name="email" placeholder="Email" required></td>
+            </tr>
+            <tr>
+                <td>Contact Number</td>
+                <td><input type="number" name="contactNumber" placeholder="8080808080" maxlength="10" required></td>
+            </tr>
+            <tr>
+                <td>Address</td>
+                <td><textarea name="address" maxlength="200" placeholder="Address" required></textarea>
+                <br> Max 200 characters</td>
+            </tr>
+            <tr>
+                <td>City</td>
+                <td><input type="text" name="city" maxlength="100" placeholder="City" required></td>
+            </tr>
+            <tr>
+                <td>State</td>
+                <td><input type="text" name="state" maxlength="100" placeholder="State" required></td>
+            </tr>
+            <tr>
+                <td>Pin Code</td>
+                <td><input type="number" name="pinCode" minlength="6" maxlength="6" placeholder="Pin Code" required></td>
+            </tr>
+            <tr>
+                <td>Country</td>
+                <td><input type="text" name="country" maxlength="100" placeholder="Country" required></td>
+            </tr>
+            <tr>
+                <td>Hobbies</td>
+                <td>
+                    <input type="checkbox" name="hobby1" value="Reading">Reading
+                    <input type="checkbox" name="hobby2" value="Traveling">Traveling
+                    <input type="checkbox" name="hobby3" value="Sports">Sports
+                    <input type="checkbox" name="hobby4" value="Music">Music
+                    <input type="checkbox" name="hobby5" value="Arts">Arts
+                    <input type="checkbox" name="hobby6" value="Others">Others <input type="text" name="otherHobby" placeholder="Please specify">
+                </td>
+            </tr>
+            <tr>
+                <td>Qualification</td>
+                <td>
+                    <select name="qualification" required>
+                        <option value="Default"></option>
+                        <option value="High School">High School</option>
+                        <option value="Diploma">Diploma</option>
+                        <option value="Undergraduate">Undergraduate</option>
+                        <option value="Postgraduate">Postgraduate</option>
+                        <option value="Doctorate">Doctorate</option>
+                    </select>
+            </tr>
+            <tr>
+                <td>Courses Applied For</td>
+                <td>
+                    <input type="radio" name="course" value="FSD" required>FSD
+                    <input type="radio" name="course" value="DS" required>DS
+                    <input type="radio" name="course" value="cloud" required>Cloud Computing
+                    <input type="radio" name="course" value="AIDS" required>AIDS    
+                </td>
+            </tr>
+        </form>
+    </table>
+    <br><br>
+    <center>
+        <button><input type="submit"></button>
+        <button><input type="reset"></button>
+    </center>
+</body>
+</html>
