@@ -1,0 +1,39 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgb(50, 50, 50);
+    background: #d7d7bb;
+}
+
+#blue{
+    background-color: rgb(0, 0, 120);
+    color: rgb(0, 0, 120) ;
+}
+
+#img{
+    width: 200px;
+    height: 200px;
+    display: block;
+    margin: 20px auto;
+}
+
+.para2{
+    margin: 20px;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgb(50, 50, 50);
+    margin: 0 100px;
+    padding: 10px 0 0 0;
+}
+
+#info{
+    text-align: left;
+    font-size: 18px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgb(80, 80, 80);
+    margin: 0 100px;
+    padding: 10px 0 0 0;
+}

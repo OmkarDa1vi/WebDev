@@ -1,0 +1,39 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: Arial, sans-serif;
+    background-color: #dab6b6;
+    color: #333;
+    line-height: 1.6;
+}
+.institute-name{
+    text-align: center;
+       margin: 20px 0;
+}
+.location{
+    text-align: center;
+       color: #555;
+    margin-bottom: 20px;
+}
+.courses-offered{
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 0 20px;
+
+    color: #555;
+}
+h3{
+    text-align: center;
+    margin: 20px 0;
+}
+.banner-image{
+    display: block;
+    margin: auto;
+    width: 25%;
+    height: 25%;
+    border: #000000 solid 2px;
+    box-shadow: #ffffff;
+}
