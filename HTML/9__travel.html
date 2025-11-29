@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+           display: grid;
+           width: 100%;
+           height: auto;
+           grid-template-areas: "a a b b b b"
+                                "a a c c d d"
+                                "a a c c d d" ;
+            grid-template-columns: repeat(6, 1fr);
+            grid-template-rows: auto auto auto;
+            gap: 10px;
+        }
+        .left-img {
+            grid-area: a;
+            width: 100%;
+            height: fit-content;
+        }
+        h1{
+            grid-area: b;
+            text-align: start;
+            align-self: center;
+            font-size: 5rem;
+        }
+        .item3 {
+            grid-area: c;
+            width: 100%;
+            height: auto;
+        }
+        .item4 {
+            grid-area: d;
+            width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        
+            <img  class="left-img" src="./../IMG/img1 (1).png" alt="">
+        
+        
+            <h1>Where do you want to go?</h1>
+        
+        
+            <img class="bottom item3" src="./../IMG/img1 (2).png" alt="">
+        
+        
+            <img class="bottom item4" src="./../IMG/img1 (3).png" alt="">
+        
+    </div>
+</body>
+</html>
