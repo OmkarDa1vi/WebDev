@@ -1,0 +1,24 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container{
+    display: flex;
+}
+.box {
+    width: 50%;
+    padding: 20px;
+  }
+#logo{
+    font-size: 2.5em;
+    font-family: cursive;
+    color: rgb(132, 127, 127);
+    margin-left: 200px;
+}
+.menu-img{
+    width: 3vw;
+    height: auto;
+    padding: 5px;
+}
+

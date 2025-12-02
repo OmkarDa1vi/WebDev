@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        .container{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: auto;
+        }
+        
+        .layout {
+            display: grid;
+            grid-template-areas: 
+                "image1 img1 image3"
+                "image2 img1 image4";
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: auto auto auto;
+            gap: 10px;
+            width: 80%;
+        }
+        .image1 {
+            grid-area: image1;
+
+        }
+        .image2 {
+            grid-area: image2;
+          
+        }
+        .img1 {
+            grid-area: img1;
+           
+        }
+        .image3 {
+            grid-area: image3;
+            
+        }
+        .image4 {
+            grid-area: image4;
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img class="image1 " src="./../IMG/img1 (2).png" alt="">
+        <img class="image2 " src="./../IMG/img1 (3).png" alt="">
+        <img class="img1" src="./../IMG/img1 (1).png" alt="">
+        <img class="image3 " src="./../IMG/img1 (3).png" alt="">
+        <img class="image4 " src="./../IMG/img1 (2).png" alt="">
+    </div>
+</body>
+</html>
