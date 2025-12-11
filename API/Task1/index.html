@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Current Weather</h1>
+        <div class="search-area">
+            <input type="text" id="cityInput" placeholder="Enter city name...">
+            <button id="fetchButton">Get Weather</button>
+        </div>
+
+        <div class="weather-data" id="weatherData">
+        </div>
+    </div>
+
+    <script>
+        const cityInput = document.getElementById('cityInput');
+        const fetchButton = document.getElementById('fetchButton');
+        const weatherData = document.getElementById('weatherData');
+        const errorMessage = document.getElementById('errorMessage');
+
+        const API_KEY = "5c0274b234c0706c701e19dfe08198bf";
+
+        fetchButton.addEventListener('click', () => {
+            const city = cityInput.value.trim();
+            city ? getWeather(city) : showError('Please enter a city name.');
+        });
+
+        async function getWeather(city) {
+            const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${API_KEY}&units=metric`;
+
+            weatherData.innerHTML = '';
+            hideError();
+
+            try {
+                const response = await fetch(url);
+                if (!response.ok) throw new Error('City not found');
+
+                const data = await response.json();
+                displayWeather(data);
+
+            } catch (error) {
+                showError(error.message);
+            }
+        }
+
+        function displayWeather(data) {
+            const { name, main, weather, wind } = data;
+
+            weatherData.innerHTML = `
+        <h2>${name}</h2>
+        <p><strong>Temperature:</strong> ${main.temp}°C</p>
+        <p><strong>Condition:</strong> ${capitalize(weather[0].description)}</p>
+        <p><strong>Wind Speed:</strong> ${wind.speed} m/s</p>
+    `
+        }
+
+        const showError = msg => {
+            errorMessage.textContent = msg;
+            errorMessage.style.display = 'block';
+        };
+
+        const hideError = () => errorMessage.style.display = 'none';    
+
+        const capitalize = text => text[0].toUpperCase() + text.slice(1);
+
+    </script>
+</body>
+
+</html>
