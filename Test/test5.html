@@ -18,12 +18,17 @@
         let high1=0;
 
         for (i = 1; i < max ; i++) {
-            if(arr[i]<arr[i-1]){
+            if(arr[i]>arr[i-1]){
                 high = arr[i];
-                if
+                if(high > arr[i+1]){
+                    high1 = arr[i+1];
+                }
             }
             break;
         }
+        console.log(arr);
+        console.log(high1);
+        console.log(high);
     </script>
 </body>
 
