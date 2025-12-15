@@ -1,0 +1,53 @@
+body {
+  margin: 0;
+  min-height: 100vh;
+
+
+
+  /* Blue streetlight glow from top-right */
+  background-image: radial-gradient(
+                                     circle at 100% 10%,
+    /* position: top-right corner */ rgba(84, 120, 255, 0.9) 0%,
+    /* bright blue center */         rgba(84, 120, 255, 0) 55%
+  );
+
+  background-repeat: no-repeat;
+  background-size: 70% 70%; /* size of the glow area */
+}
+
+.container {
+  margin: 0 10vw;5
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  justify-content: space-between;
+  height: max-content;
+}
+
+.container-nav {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  justify-content: space-around;
+}
+
+.container-menu {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  justify-content: space-around;
+}
+
+.navbar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.menu {
+  border: none;
+}
+
+#logo-img {
+  background: black;
+}

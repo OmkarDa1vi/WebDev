@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            border: 0cap;
+            margin: 0%;
+        }
+
+        .container {
+            display: grid;
+            grid-template-areas:
+                "a a a"
+                "b c c"
+                "b c c";
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: auto;
+            gap: 5px;
+        }
+
+        .header {
+            grid-area: a;
+            border: 10px solid;
+        }
+
+        .sidebar {
+            grid-area: b;
+            border: 10px solid;
+        }
+
+        .main {
+            border: 10px solid;
+            grid-area: c;
+        }
+
+        @media(max-width : 800px) {
+            .container {
+                grid-template-areas:
+                    "a"
+                    "c";
+                grid-template-columns: 1fr;
+            }
+
+            .sidebar {
+                display: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">header</div>
+        <div class="sidebar">sidebar</div>
+        <div class="main">main content</div>
+    </div>
+</body>
+
+</html>

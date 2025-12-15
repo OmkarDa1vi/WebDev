@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            border: 0cap;
+            margin: 0%;
+        }
+
+        .container {
+            display: grid;
+            grid-template-areas:
+                "a a a a"
+                "d d d d"
+                "b c c c"
+                "b c c c";
+            grid-template-columns: repeat(4, 1fr);
+            gap: 5px;
+        }
+
+        .header {
+            grid-area: a;
+            border: 10px solid;
+            padding: 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .menu-btn {
+            display: none;
+        }
+
+        .navbar {
+            grid-area: d;
+            border: 10px solid;
+            padding: 10px;
+        }
+
+        .sidebar {
+            grid-area: b;
+            border: 10px solid;
+            padding: 10px;
+        }
+
+        .main {
+            grid-area: c;
+            border: 10px solid;
+            padding: 10px;
+        }
+
+        @media (max-width: 800px) {
+            .container {
+                grid-template-areas:
+                    "a"
+                    "d"
+                    "b"
+                    "c";
+                grid-template-columns: 1fr;
+            }
+
+            .menu-btn {
+                display: block;
+            }
+
+            .navbar {
+                display: none;
+            }
+
+            .navbar.active {
+                display: block;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="header">
+            <span>Header</span>
+            <span class="menu-btn" onclick="toggleNavbar()">≣</span>
+        </div>
+
+        <div class="navbar" id="navbar">
+            <p>Home</p>
+            <p>Products</p>
+            <p>Services</p>
+            <p>Contact</p>
+        </div>
+
+        <div class="sidebar">Sidebar</div>
+        <div class="main">Main Content</div>
+    </div>
+
+    <script>
+        function toggleNavbar() {
+            document.getElementById("navbar").classList.toggle("active");
+        }
+    </script>
+</body>
+
+</html>
