@@ -8,11 +8,13 @@ export default function Layout() {
   };
 
   return (
-    <div
+    <center>
+      <div
       style={{
         display: "flex",
         justifyContent: "center",
-        alignItems: "center",
+        alignItems: "center", 
+        alignContent: "center", 
         minHeight: "100vh",
         gap: "20px",
         padding: "20px",
@@ -31,5 +33,6 @@ export default function Layout() {
         }}
       />
     </div>
+    </center>
   );
 }
