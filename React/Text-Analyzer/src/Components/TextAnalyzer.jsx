@@ -1,22 +1,28 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 
 function TextAnalyzer({ text, setText }) {
   const [charCount, setCharCount] = useState(0);
   const [wordCount, setWordCount] = useState(0);
   const [specialCount, setSpecialCount] = useState(0);
+  const [repeatCount, setRepeatCount] = useState(0);
 
   function forCharCount(char) {
     const count = char.length;
     return count;
   }
-function forWordCount(text) {
-  if (text.trim() === "") return 0;
-  return text.trim().split(/\s+/).length;
-}
+
+  function forWordCount(text) {
+    if (text.trim() === "") return 0;
+    return text.trim().split(/\s+/).length;
+  }
 
   function forSpecialCount(special) {
     const matches = special.match(/[^a-zA-Z0-9 ]/g);
     return matches ? matches.length : 0;
+  }
+
+  function repeatedCharCount(str) {
+    return [...new Set(str)].filter((ch) => str.split(ch).length > 2);
   }
 
   function handleInput(x) {
@@ -25,20 +31,42 @@ function forWordCount(text) {
     setCharCount(forCharCount(data));
     setWordCount(forWordCount(data));
     setSpecialCount(forSpecialCount(data));
+    setRepeatCount(repeatedCharCount(data));
   }
 
   return (
-    <div>
-      <h2>Enter Text: </h2>
-      <textarea
-        type="text"
-        value={text}
-        onChange={(e) => handleInput(e)}
-        placeholder="Enter text"
-      />
-      <p>Characters: {charCount}</p>
-      <p>Words: {wordCount}</p>
-      <p>Special Characters: {specialCount}</p>
+    <div className="mainDiv">
+      <div className="input">
+        <h2>Enter Text: </h2>
+        <textarea
+          type="text"
+          value={text}
+          onChange={(e) => handleInput(e)}
+          placeholder="Enter text"
+        />
+      </div>
+      
+      <div className="stats">
+        <div className="stat-card">
+          <h4 className="label">Characters</h4>
+          <p className="value">{charCount}</p>
+        </div>
+
+        <div className="stat-card">
+          <h4 className="label">Words</h4>
+          <p className="value">{wordCount}</p>
+        </div>
+
+        <div className="stat-card">
+          <h4 className="label">Special</h4>
+          <p className="value">{specialCount}</p>
+        </div>
+
+        <div className="stat-card">
+          <h4 className="label">Repeated</h4>
+          <p className="value">{repeatCount}</p>
+        </div>
+      </div>
     </div>
   );
 }
