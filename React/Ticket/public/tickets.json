@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "subject": "Login page crashing",
+    "priority": "High",
+    "status": "Open",
+    "user": "Alice Johnson",
+    "description": "When I click login, the page turns white."
+  },
+  {
+    "id": 2,
+    "subject": "Update billing address",
+    "priority": "Low",
+    "status": "Resolved",
+    "user": "Bob Smith",
+    "description": "I need to change my credit card details."
+  },
+  {
+    "id": 3,
+    "subject": "Feature request: Dark mode",
+    "priority": "Medium",
+    "status": "Open",
+    "user": "Charlie Brown",
+    "description": "Please add dark mode to the dashboard."
+  }
+]

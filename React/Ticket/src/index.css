@@ -1,0 +1,140 @@
+/* GLOBAL RESET */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Segoe UI", sans-serif;
+}
+body {
+  background-color: #f4f7f6;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* LAYOUT */
+.app-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+
+/* BUTTONS */
+button {
+  cursor: pointer;
+  padding: 0.6rem 1.2rem;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: opacity 0.2s;
+}
+button:hover {
+  opacity: 0.9;
+}
+.btn-primary {
+  background-color: #007bff;
+  color: white;
+}
+.btn-secondary {
+  background-color: #6c757d;
+  color: white;
+}
+.btn-success {
+  background-color: #28a745;
+  color: white;
+}
+.btn-danger {
+  background-color: #dc3545;
+  color: white;
+}
+.btn-warning {
+  background-color: #ffc107;
+  color: #212529;
+}
+
+/* DASHBOARD HEADER */
+.dashboard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+/* CONTROLS (Search/Filter) */
+.controls {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  background: white;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+.controls input,
+.controls select {
+  padding: 0.5rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+.controls input {
+  flex-grow: 1;
+}
+
+/* GRID LAYOUT */
+.ticket-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+/* TICKET CARD */
+.ticket-card {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s;
+  border-left: 5px solid transparent;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.ticket-card:hover {
+  transform: translateY(-5px);
+}
+.meta-data {
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* STATUS BADGES */
+.status-badge {
+  padding: 0.25rem 0.6rem;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+.status-Open {
+  background-color: #e3f2fd;
+  color: #007bff;
+}
+.status-Resolved {
+  background-color: #d4edda;
+  color: #28a745;
+}
+
+/* PRIORITY COLORS */
+.priority-High {
+  border-left-color: #dc3545;
+}
+.priority-Medium {
+  border-left-color: #ffc107;
+}
+.priority-Low {
+  border-left-color: #28a745;
+}
