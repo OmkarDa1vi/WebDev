@@ -8,6 +8,11 @@ body {
   margin: 0;
 }
 
+.mainLayout {
+  display: flex;
+  justify-content: space-between;
+}
+
 .player {
   background: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(10px);
