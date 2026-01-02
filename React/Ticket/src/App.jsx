@@ -3,6 +3,7 @@ import { TicketProvider } from "./context/TicketContext";
 import Dashboard from "./components/Dashboard";
 import TicketDetails from "./components/TicketDetails";
 import TicketForm from "./components/TicketForm";
+import "./index.css";
 
 function App() {
   return (
