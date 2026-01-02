@@ -1,4 +1,4 @@
-/* GLOBAL RESET */
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -11,7 +11,6 @@ body {
   line-height: 1.6;
 }
 
-/* LAYOUT */
 .app-container {
   max-width: 1000px;
   margin: 0 auto;
@@ -19,7 +18,6 @@ body {
 }
 
 
-/* BUTTONS */
 button {
   cursor: pointer;
   padding: 0.6rem 1.2rem;
@@ -52,7 +50,6 @@ button:hover {
   color: #212529;
 }
 
-/* DASHBOARD HEADER */
 .dashboard-header {
   display: flex;
   justify-content: space-between;
@@ -60,7 +57,6 @@ button:hover {
   margin-bottom: 2rem;
 }
 
-/* CONTROLS (Search/Filter) */
 .controls {
   display: flex;
   gap: 1rem;
@@ -81,14 +77,12 @@ button:hover {
   flex-grow: 1;
 }
 
-/* GRID LAYOUT */
 .ticket-list {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   gap: 1.5rem;
 }
 
-/* TICKET CARD */
 .ticket-card {
   background: white;
   padding: 1.5rem;
@@ -111,7 +105,6 @@ button:hover {
   align-items: center;
 }
 
-/* STATUS BADGES */
 .status-badge {
   padding: 0.25rem 0.6rem;
   border-radius: 20px;
@@ -128,7 +121,6 @@ button:hover {
   color: #28a745;
 }
 
-/* PRIORITY COLORS */
 .priority-High {
   border-left-color: #dc3545;
 }

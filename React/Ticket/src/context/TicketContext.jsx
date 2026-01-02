@@ -8,7 +8,6 @@ export const TicketProvider = ({ children }) => {
   const [error, setError] = useState(null);
   const [filterStatus, setFilterStatus] = useState("All");
 
-  // 1. LOAD DATA (Check LocalStorage, else fetch JSON)
   useEffect(() => {
     const loadTickets = async () => {
       try {
@@ -31,14 +30,12 @@ export const TicketProvider = ({ children }) => {
     loadTickets();
   }, []);
 
-  // 2. SAVE DATA (Sync to LocalStorage on change)
   useEffect(() => {
     if (!loading) {
       localStorage.setItem("tickets", JSON.stringify(tickets));
     }
   }, [tickets, loading]);
-
-  // ACTIONS
+  
   const addTicket = (newTicket) => {
     const ticketWithId = { ...newTicket, id: Date.now(), status: "Open" };
     setTickets((prev) => [...prev, ticketWithId]);
