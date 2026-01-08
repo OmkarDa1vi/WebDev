@@ -4,7 +4,7 @@
     "subject": "Login page crashing",
     "priority": "High",
     "status": "Open",
-    "user": "Alice Johnson",
+    "user": "Ajay",
     "description": "When I click login, the page turns white."
   },
   {
@@ -12,7 +12,7 @@
     "subject": "Update billing address",
     "priority": "Low",
     "status": "Resolved",
-    "user": "Bob Smith",
+    "user": "Raj",
     "description": "I need to change my credit card details."
   },
   {
@@ -20,7 +20,7 @@
     "subject": "Feature request: Dark mode",
     "priority": "Medium",
     "status": "Open",
-    "user": "Charlie Brown",
+    "user": "Hardik",
     "description": "Please add dark mode to the dashboard."
   }
 ]
