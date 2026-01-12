@@ -1,0 +1,23 @@
+[
+  {
+    "id": 1,
+    "subject": "Login page not loading",
+    "status": "Open",
+    "user": "Shah Rukh Khan",
+    "description": "I cannot access the login page on Chrome."
+  },
+  {
+    "id": 2,
+    "subject": "Payment failed error",
+    "status": "Closed",
+    "user": "Salman Khan",
+    "description": "My credit card was charged but the order is pending."
+  },
+  {
+    "id": 3,
+    "subject": "Feature request: Dark Mode",
+    "status": "In Progress",
+    "user": "Sushant Singh Rajput",
+    "description": "Please add dark mode to the dashboard."
+  }
+]
