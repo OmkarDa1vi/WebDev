@@ -89,36 +89,35 @@ select *
 from Categories;
 select *
 from Products;
+
 -- Inner Join
 SELECT p.ProductID,
     p.ProductName,
     c.CategoryName
 FROM Products p
     INNER JOIN Categories c ON p.CategoryID = c.CategoryID;
--- Query for Left Join 
+
+-- Left Join 
 SELECT p.ProductID,
     p.ProductName,
     c.CategoryName
 FROM Products p
     LEFT JOIN Categories c ON p.CategoryID = c.CategoryID;
--- Query for Right Join 
+
+-- Right Join 
 SELECT p.ProductID,
     p.ProductName,
     c.CategoryName
 FROM Products p
     RIGHT JOIN Categories c ON p.CategoryID = c.CategoryID;
--- Query for Left Join 
-SELECT p.ProductID,
-    p.ProductName,
-    c.CategoryName
-FROM Products p
-    LEFT JOIN Categories c ON p.CategoryID = c.CategoryID;
--- Query for CROSS Join 
+
+-- CROSS Join 
 SELECT p.ProductName,
     c.CategoryName
 FROM Products p
     CROSS JOIN Categories c;
--- Query for SELF Join 
+
+-- SELF Join 
 SELECT p1.ProductID AS Product1_ID,
     p1.ProductName AS Product1,
     p2.ProductID AS Product2_ID,
