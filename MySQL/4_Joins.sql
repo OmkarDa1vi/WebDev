@@ -1,3 +1,4 @@
+-- creating a schema and tables
 create schema GadaP_Electronics;
 use Gada_Electronics;
 create table Categories (

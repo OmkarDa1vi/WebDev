@@ -1,4 +1,4 @@
--- 1. Use the Restaurants database
+-- 1. Use the Restaurants databases
 use Restaurants;
 
 -- 2. Show all tables in the database

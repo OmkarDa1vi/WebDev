@@ -1,4 +1,5 @@
 use zomato;
+-- creating a procedure to add restos
 DELIMITER $$ create procedure AddRestos(
     in Restaurant_Name varchar(255),
     in City varchar(255),

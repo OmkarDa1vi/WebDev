@@ -1,6 +1,6 @@
 -- 1. Use the zomato_db database
 use zomato;
--- 2. Show all tables in the database
+-- 2. Show all tables in the databases
 select *
 from zomato;
 -- 3. Read operation: Retrieve all columns from the Restaurants table where the City is 'New Delhi'

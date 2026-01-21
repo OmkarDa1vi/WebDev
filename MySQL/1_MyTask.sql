@@ -1,5 +1,5 @@
 create database Restaurants;
-
+-- using the database   
 use Restaurants;
 
 create table
