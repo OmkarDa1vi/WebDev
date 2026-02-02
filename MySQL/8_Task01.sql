@@ -40,3 +40,50 @@ insert into Products(id, ProdName,Price) values (1, 'Laptop', 75000.00),
 (4, 'Keyboard', 1500.00);
 
 select * from Products where ProdName = 'Laptop';
+
+-- 7. Copy the structure of products table into products_backup without copying its data.
+create table Products_Backup like Products;
+
+-- 8. Copy both structure and data from products to products_full_backup.
+create table Products_Full_Backup as select * from Products; 
+
+-- 9. Create a transaction that inserts two products and then roll it back, showing that the products were not persisted.
+start transaction;
+insert into products(id,ProdName,Price) values (5,'Mouse', 350.00),(6, 'Printer', 20000.00);
+select * from Products;
+rollback;
+select * from Products;
+
+-- 10. Create a transaction that updates product prices and commit the changes.
+start transaction;
+update Products set Price = 500.00 where id = 5;
+update Products set Price = 25000.00 where id = 6;
+select * from Products;
+commit;
+
+-- 11. Create a table orders(id INT PRIMARY KEY, product_id INT, quantity INT, created_at DATE). Insert 5 rows and query only the orders created in the last 30 days.
+create table Orders(id INT PRIMARY KEY, Product_Id INT, Quantity INT, Created_At DATE);
+insert into Orders (id, Product_Id, Quantity, Created_At) values
+(1, 101, 2, '2025-11-15'),
+(2, 105, 1, '2025-12-01'),
+(3, 202, 5, '2025-12-28'),
+(4, 110, 3, '2026-01-10'),
+(5, 305, 10, '2026-01-20');
+
+select * from Orders where Created_At >= date_sub(curdate(), interval 30 day);
+
+-- 12. Write a query using CASE to categorize product price levels (e.g., 'Low', 'Medium', 'High').
+select ProdName, Price,
+case 
+	when Price<5000 then 'low'
+    when Price between 5000 and 7000 then 'medium' 
+    when Price >7000 then 'high'
+    else 'UnCategorized'
+    end as Price_level
+from Products;
+
+
+-- 13. Add a NOT NULL constraint to products.price and attempt to insert a null price to observe
+-- behavior.
+-- 14. Create a trigger on products table to log deletes into a products_log table that stores id, name,
+-- and deleted_at timestamp.

@@ -2,7 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="046ee894-2505-4915-a267-63617a1ac81f" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/React/React-00/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/React/React-00/src/App.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MySQL/8_Task01.sql" beforeDir="false" afterPath="$PROJECT_DIR$/MySQL/8_Task01.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/React/Ticket/public/tickets.json" beforeDir="false" afterPath="$PROJECT_DIR$/React/Ticket/public/tickets.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -12,9 +15,9 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 5
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 5
+}</component>
   <component name="ProjectId" id="37DIw2Qy5PKcwoUUnNkNnTyKb4t" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -27,6 +30,7 @@
     "RunOnceActivity.git.unshallow": "true",
     "RunOnceActivity.typescript.service.memoryLimit.init": "true",
     "git-widget-placeholder": "main",
+    "kotlin-language-version-configured": "true",
     "nodejs_package_manager_path": "npm",
     "vue.rearranger.settings.migration": "true"
   }
@@ -46,6 +50,7 @@
       <option name="presentableId" value="Default" />
       <updated>1766431450696</updated>
       <workItem from="1766431460429" duration="31000" />
+      <workItem from="1769068643329" duration="314000" />
     </task>
     <servers />
   </component>
