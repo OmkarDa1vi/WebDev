@@ -4,7 +4,7 @@
 }
 
 :root {
-  font-family: cursive;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serifx;
   background-color: rgb(247, 220, 185);
 }
 
@@ -24,10 +24,6 @@ body {
   border-radius: 12px;
   box-shadow: 0 1vh 2vh rgba(0, 0, 0, 0.1);
   transition: all 0.5s ease;
-}
-
-.card:hover {
-  box-shadow: 0 25px 30px red;
 }
 
 .input {

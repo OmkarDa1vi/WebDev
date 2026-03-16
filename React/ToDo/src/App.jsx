@@ -1,25 +1,47 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import "./index.css";
+
+const url = "http://localhost:5001";
 
 function App() {
   const [todo, setTodo] = useState([]);
   const [input, setInput] = useState("");
 
-  const addTask = () => {
+  const addTask = async () => {
+    if (input === "") return;
+
     const newTodo = {
-      id: Date.now(),
       task: input,
     };
 
-    if(input === "")
-      return(0);
+    try {
+      const res = await fetch(`${url}/todo`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(newTodo),
+      });
 
-    setTodo([...todo, newTodo]);
-    setInput("");
+      const savedTodoFromServer = await res.json();
+
+      setTodo([...todo, savedTodoFromServer]);
+      setInput("");
+    } catch (err) {
+      console.log("Error:", err);
+    }
   };
+  useEffect(() => {
+    fetch(`${url}/todo`)
+      .then((res) => res.json())
+      .then((data) => {
+        setTodo(data);
+      })
+      .catch((err) => console.log(err));
+  }, []);
 
   const deleteTask = (id) => {
-    setTodo(todo.filter((t) => t.id !== id));
+    setTodo(todo.filter((t) => t._id !== id));
   };
 
   return (
@@ -38,9 +60,9 @@ function App() {
         <div draggable className="list">
           <ul className="todo">
             {todo.map((todo) => (
-              <li key={todo.id}>
+              <li key={todo._id}>
                 <span>{todo.task}</span>
-                <button onClick={() => deleteTask(todo.id)}>Delete</button>
+                <button onClick={() => deleteTask(todo._id)}>Delete</button>
               </li>
             ))}
           </ul>
