@@ -12,6 +12,7 @@ function App() {
 
     const newTodo = {
       task: input,
+      status: "pending",
     };
 
     try {
@@ -44,6 +45,16 @@ function App() {
     setTodo(todo.filter((t) => t._id !== id));
   };
 
+  const toggleStatus = (id) => {
+    setTodo(
+      todo.map((t) =>
+        t._id === id || t.id === id
+          ? { ...t, status: t.status === "pending" ? "completed" : "pending" }
+          : t,
+      ),
+    );
+  };
+
   return (
     <>
       <div className="card" draggable>
@@ -63,6 +74,16 @@ function App() {
               <li key={todo._id}>
                 <span>{todo.task}</span>
                 <button onClick={() => deleteTask(todo._id)}>Delete</button>
+                <button
+                  onClick={() => toggleStatus(todo._id || todo.id)}
+                  style={{
+                    backgroundColor:
+                      todo.status === "completed" ? "green" : "orange",
+                    color: "white",
+                  }}
+                >
+                  {todo.status === "completed" ? "Completed" : "Pending"}
+                </button>
               </li>
             ))}
           </ul>
